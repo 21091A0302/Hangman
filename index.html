@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Color Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+        <h1>Welcome to the Hangman Game</h1>
+        <button id="startButton" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+        <h1>Hangman Game</h1>
+        <div class="hint-section">
+            <p>Hint: <span id="hintText"></span></p>
+        </div>
+        <canvas id="hangmanCanvas" width="200" height="200"></canvas>
+        <div id="word"></div>
+        <div id="keyboard"></div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen hidden">
+        <h1 id="gameOverMessage">Game Over</h1>
+        <div class="bomb-animation">
+            <div class="bomb"></div>
+            <div class="explosion"></div>
+        </div>
+        <button onclick="resetGame()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
